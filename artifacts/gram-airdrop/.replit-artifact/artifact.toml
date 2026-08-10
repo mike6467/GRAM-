@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "GRAM AIRDROP"
+description = "A polished, modern landing page for the GRAM currency airdrop, introducing the token, its community, eligibility journey, and safe next steps for participants."
+version = "1.0.0"
+id = "artifacts/gram-airdrop"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19293
+
+[services.development]
+run = "pnpm --filter @workspace/gram-airdrop run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/gram-airdrop", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/gram-airdrop/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19293"
+BASE_PATH = "/"
