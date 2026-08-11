@@ -99,7 +99,7 @@ function App() {
             <h1 id="hero-title" className="hero-title display reveal delay-1 mt-6 max-w-[720px] text-[clamp(4.7rem,10.2vw,9.4rem)] font-bold leading-[.84] tracking-[-.08em] text-[#1b3441]">The first<br /><span className="text-[#188d82]">telegram</span><br />airdrop.</h1>
             <p className="reveal delay-2 mt-8 max-w-[460px] text-[15px] leading-7 text-[#5a7178]">GRAM is the Telegram-native currency built to move through users, mini apps, and channels. This is your first look at the airdrop journey — before you take a single step.</p>
             <div className="reveal delay-3 mt-9 flex flex-wrap gap-3"><button type="button" onClick={() => setPreviewOpen(true)} data-testid="button-hero-preview" className="btn-primary">Check eligibility preview <ArrowRight size={16} /></button><button type="button" onClick={() => scrollTo('network')} data-testid="button-hero-explore" className="btn-secondary">Explore Gram <ArrowDownRight size={16} /></button></div>
-            <p className="mono reveal delay-3 mt-7 text-[10px] uppercase tracking-[.11em] text-[#7b9295]"><span className="mr-2 text-[#e3b743]">●</span>Campaign preview only — no live allocation implied</p>
+            <p className="mono reveal delay-3 mt-7 text-[10px] uppercase tracking-[.11em] text-[#7b9295]"><span className="mr-2 text-[#e3b743]">●</span>The allocation is currently live and ongoing</p>
           </div>
           <div className="relative z-0 lg:pt-3"><NetworkOrb /></div>
         </div>
